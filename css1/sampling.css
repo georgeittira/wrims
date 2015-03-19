@@ -1,0 +1,30 @@
+/* CSS Document */
+
+.samplingtable, .samplingtable tr
+{
+	padding: 0px;/* Hari 13/8 original 2px*/
+	border: solid 1px #567BFC ;
+	
+	vertical-align: top;
+
+}
+.samplingtable td
+{
+	padding: 0px;/* Hari 13/8 original 2px*/
+	border: solid 1px #567BFC ;
+	width:155px;
+	vertical-align: top;
+
+}
+
+#mainstory
+
+{padding: 5px 15px 5px 10px; 
+text-align:justify; 
+border: thin; 
+border-color:#CC0033;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:14px;
+margin-top:10px;
+
+ }

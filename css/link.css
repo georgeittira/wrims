@@ -1,0 +1,18 @@
+.navigation {
+	FONT-WEIGHT:8pt ; FONT-SIZE: 8pt; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A.navigation:link {
+	FONT-WEIGHT:8pt ; FONT-SIZE: 8pt; COLOR: ##FFFFFF; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A.navigation:visited {
+	FONT-WEIGHT:8pt ; FONT-SIZE: 8pt; COLOR: ##FFFFFF; FONT-STYLE: normal; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A.navigation:hover {
+	FONT-WEIGHT:8pt ; FONT-SIZE: 8pt; COLOR: black; FONT-STYLE: normal; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+A.navigation_selected {
+	FONT-WEIGHT:8pt ; FONT-SIZE: 8pt; COLOR: #FFFFFF; FONT-STYLE: normal; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A.navigation_selected:hover {
+	FONT-WEIGHT:8pt ; FONT-SIZE: 8pt; COLOR: #003366; FONT-STYLE: normal; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}

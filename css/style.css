@@ -1,0 +1,11 @@
+
+.button
+{
+	BACKGROUND-COLOR: #316480;
+	COLOR: white;
+	FONT-FAMILY: Verdana, Helvetica, Arial;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: xx-small;
+	WIDTH:120;
+	HEIGHT:20;
+}

@@ -1,0 +1,46 @@
+/* CSS Document */
+
+#met-date-select{
+width:100%; padding-right:5px; margin-top:25px;font-size:14px; font-weight:bold; }
+
+ #content-temp-table {width:100%; float:left; margin-top:10px;}
+   
+    #content-wind-table {float:left; width:100%;}
+   
+   .getdata {
+	margin-bottom:5px;
+	background-color: #FFCC33;
+	padding-right:5px;
+	
+}
+.metdatamenu{ font-size:14px; font-weight:bold; float:right; top:45px; padding-right:5px;}
+.art-articlet4 table, table.art-articlet4 .art-articlet4 tr, .art-articlet4 th, .art-articlet4 td
+
+{
+	
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:#FFFF99;
+	font-size:12px;
+	color:#000000;
+	
+}
+
+.art-atriclet4 td .values
+{text-align:centre;}
+
+.style3
+{
+	background-color:#FDE2BD;
+	text-align:center;
+	vertical-align:middle;
+	padding: 0px;
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: 0px;
+	color: #660033;
+}
+
+#tablemargins {margin-top:5px;}
