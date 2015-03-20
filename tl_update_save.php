@@ -5,7 +5,6 @@
 	include ("configdb.php");
    	   
        $doc_no          = $_GET['doc_no'];
-       //$ecn_fcn_key     = $_GET['ecn_fcn_key'];
        $unit            =  $_GET['unit'];
        $from            = $_GET['from'];
        $wire_no         = $_GET['wire_no'];
@@ -16,7 +15,7 @@
        $destination     = $_GET['destination'];
        $remarks         = $_GET['remarks'];
        $drawing_no      = $_GET['drawing_no'];
-    //updating 'from' details to terminal_list   
+    //updating 'destination' details to terminal_list   
 	switch ($remarks)	{
         case ($remarks == 'ADDITION') :
             if ( $cable_mod == 'yes' ) {
@@ -38,7 +37,8 @@
             $result=$conn->query($sql);
          BREAK;
     }
-    echo $sql;
-    echo $doc_no;
-     //updating 'destination' details to terminal_list 
-    // header("Location: wri_update.php/");
+       //updating 'destination' details to terminal_list  
+       
+       
+        header("Location: wri_update.php?docNo=".urlencode($doc_no));
+   
