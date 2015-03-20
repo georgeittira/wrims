@@ -65,15 +65,16 @@ session_start();
                 }
                 
 			 if ($act == 304 ) {
-			 $sql = "update wri_list  set approved_by ='$usr',  appr_by_desig ='$ag', approved_date = Now() where wri_no = '$id'";
+			 $sql = "update wri_list  set approved_by ='$usr',  appr_by_desig ='$ag', approved_date = Now(), wri_status_flag ='$act' where wri_no = '$id'";
 					$result=$conn->query($sql);
+                         
 				}
 			BREAK;
 			
 		case ($ag == 'TSS') :
 			
 				if ($act == 303 ) {
-					$sql = "update wri_list set reviewed_by ='$usr',  rev_by_desig ='$ag', reviewed_date = Now() 
+					$sql = "update wri_list set reviewed_by ='$usr',  rev_by_desig ='$ag', reviewed_date = Now(), wri_status_flag ='$act' 
 						where wri_no = '$id'";
 					$result=$conn->query($sql);
 				
@@ -86,7 +87,9 @@ session_start();
 					$sql  = "insert into file_flow (fl_doc_no,fl_doc_type, fl_from_date, fl_from_dsgn, fl_to_whom, fl_comments, 
 						fl_from_empno, fl_status_flag, fl_marked_for)
 						values	('$id', '$typ', now(),'$dsgn', '$toWhom','$cmt','$emp', '$act', 'For document updation')";
-                $result=$conn->query($sql);        
+                $result=$conn->query($sql);  
+                $sql1 = "update wri_list set wri_status_flag ='$act' where wri_no = '$id'";
+					$result1=$conn->query($sql1);                
                 }    
 			BREAK;
 		case (substr($ag,0,3 ) == 'STE') :	
@@ -110,13 +113,17 @@ session_start();
 						fl_from_empno, fl_status_flag, fl_marked_for )
 						values	('$id', '$typ', now(),'$dsgn', '$toWhom','$cmt','$emp', '$act', 'For implementation')";
 				 $result=$conn->query($sql);
-                }
+                 $sql1 = "update wri_list set wri_status_flag ='$act' where wri_no = '$id'";
+					$result1=$conn->query($sql1);  
+                 }
                
 			    if ($act == 321 ) {
 				$sql  = "insert into file_flow (fl_doc_no,fl_doc_type, fl_from_date, fl_from_dsgn, fl_to_whom, fl_comments, 
 						fl_from_empno, fl_status_flag, fl_marked_for )
 						values	('$id', '$typ', now(),'$dsgn', '$toWhom','$cmt','$emp', '$act', 'For QA check')";
                 $result=$conn->query($sql);
+                $sql1 = "update wri_list set wri_status_flag ='$act' where wri_no = '$id'";
+					$result1=$conn->query($sql1);  
 				}
             BREAK;	
          
@@ -126,7 +133,9 @@ session_start();
 				$sql  = "insert into file_flow (fl_doc_no,fl_doc_type, fl_from_date, fl_from_dsgn, fl_to_whom, fl_comments, 
 						fl_from_empno, fl_status_flag, fl_marked_for )
 						values	('$id', '$typ', now(),'$dsgn', '$toWhom','$cmt','$emp', '$act', 'WRI implemented')";
-                    $result=$conn->query($sql);       
+                    $result=$conn->query($sql);  
+                $sql1 = "update wri_list set wri_status_flag ='$act' where wri_no = '$id'";
+					$result1=$conn->query($sql1);  
 				}
 				
 			BREAK;	
@@ -138,12 +147,16 @@ session_start();
 						fl_from_empno, fl_status_flag, fl_marked_for )
 						values	('$id', '$typ', now(),'$dsgn', '$toWhom','$cmt','$emp', '$act', 'For QA checks')";
                     $result=$conn->query($sql);
+                $sql1 = "update wri_list set wri_status_flag ='$act' where wri_no = '$id'";
+					$result1=$conn->query($sql1);  
 				}	
                 if ($act == 323 ) {
 					$sql  = "insert into file_flow (fl_doc_no,fl_doc_type, fl_from_date, fl_from_dsgn, fl_to_whom, fl_comments, 
 						fl_from_empno, fl_status_flag, fl_marked_for )
 						values	('$id', '$typ', now(),'$dsgn', '$toWhom','$cmt','$emp', '$act', 'For document updation')";
 				    $result=$conn->query($sql);
+                $sql1 = "update wri_list set wri_status_flag ='$act' where wri_no = '$id'";
+					$result1=$conn->query($sql1);  
                  }  
             BREAK;     
          case (substr($ag,0,3 ) == 'QAE') :     
@@ -152,8 +165,9 @@ session_start();
 				$sql  = "insert into file_flow (fl_doc_no,fl_doc_type, fl_from_date, fl_from_dsgn, fl_to_whom, fl_comments, 
 						fl_from_empno, fl_status_flag, fl_marked_for )
 						values	('$id', '$typ', now(),'$dsgn', '$toWhom','$cmt','$emp', '$act', 'For QA approval')";
-				
-                $result=$conn->query($sql);
+				    $result=$conn->query($sql);
+                $sql1 = "update wri_list set wri_status_flag ='$act' where wri_no = '$id'";
+					$result1=$conn->query($sql1);  
                 }
 			BREAK;					            
 		  
@@ -162,8 +176,11 @@ session_start();
 				if ($act == 330 ) {
 				$sql  = "insert into file_flow (fl_doc_no,fl_doc_type, fl_from_date, fl_from_dsgn, fl_to_whom, fl_comments, 
 						fl_from_empno, fl_status_flag, fl_marked_for )
-						values	('$id', '$typ', now(),'$dsgn', '$toWhom','$cmt','$emp', '$act', 'For QA approval')";
+						values	('$id', '$typ', now(),'$dsgn', '$toWhom','$cmt','$emp', '$act', 'Documents updated')";
 				 $result=$conn->query($sql);
+                $sql1 = "update wri_list set wri_status_flag ='$act' where wri_no = '$id'";
+					$result1=$conn->query($sql1);  
+                 
                 }
                
                 

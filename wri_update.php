@@ -85,7 +85,7 @@
 		echo "<td>$title</td>";
         echo "</table>";
                 
-    $wri_sql = "select a.*,b.* from master_wri a, wri_list b where b.wri_no = '$id' and b.ref_ecn_fcn_key = a.ecn_fcn_key";
+    $wri_sql = "select a.*,b.* from master_wri a, wri_list b where b.wri_no = '$id' and b.ref_ecn_fcn_key = a.ecn_fcn_key and a.tl_updated = ''";
 	$result_wri=$conn-> query($wri_sql);
 	  echo "<h3 align ='center'><font color=purple>Wire Route Information</font></h3>";
   	  echo "<table width = 100%  border =1 cellspacing=0 cellpadding=2 bordercolor=white bordercolorlight=gray style=border-collapse:collapse;>";
@@ -129,7 +129,7 @@
       	echo "<td>$remarks</td>";
 		echo "<td>$drawing_no</td>";
 		echo "<td>";
-		echo "<a href = './tl_update_save.php?doc_no=$id&unit=$unit&from=$from&wire_no=$wire_no&cable_no=$cable_no&cable_binder=$cable_binder&color_code=$color_code&cable_mod=$cable_mod&destination=$destination&remarks=$remarks&drawing_no=$drawing_no'>Update TL</a>";
+		echo "<a href = './tl_update_save.php?doc_no=$id&wri_key=$wri_key&unit=$unit&from=$from&wire_no=$wire_no&cable_no=$cable_no&cable_binder=$cable_binder&color_code=$color_code&cable_mod=$cable_mod&destination=$destination&remarks=$remarks&drawing_no=$drawing_no'>Update TL</a>";
         echo "</td></tr>";
         
 		}

@@ -39,7 +39,9 @@
 		 fl_to_whom, fl_comments, fl_status_flag,  fl_marked_for)
         		values ('WRI', '$inserted_id', now(), '$emp','$prepd_by_desig', '$boss_desig', 
 		'WRI Prepared',  '301', 'For WRI checking')";
-	$result=$conn->query($sql);
+        $result=$conn->query($sql);
+    $sql = "update ecn_fcn_list set wri_prepd = 'yes' where ecn_fcn_key = '$fcn_key'";
+		$result=$conn->query($sql);
 	//---Update status of WRI
 	
 	include("main_menu.php");

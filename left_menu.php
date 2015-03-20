@@ -18,7 +18,7 @@
 	$Agency  = 0;
 	if ($result->num_rows > 0) 
 		$row = $result->fetch_assoc();
-	$prepd_by = $row["emp_chq_name"];
+	$login = $row["emp_chq_name"];
 	
 	echo "<tr><td>";
 	echo "</td></tr>";
@@ -27,15 +27,16 @@
 		//---Agency Login-----//
 		$Agency =1;
 		echo "<tr><td bgcolor=#CCDDEE> <b><font color=red>";
-		echo "\n$prepd_by";
+		echo "\n$login";
         echo ', ';
         echo $ag;
 		echo ' - logged in';
 		echo "</b></font></td></tr>";
 		echo "<tr><td>";
 		echo "<a href='main_menu.php' target='right' class='navigation'>Home</a><br>";
-		//echo "<a href='pendinglist.php' target='right' class='navigation'>Show Pending Documents.</a><br>";
-		echo "</td></tr>";
+        echo "</td><td>";
+        echo "<a href='logout.php' target='right' class='navigation'>Logout</a><br>";
+        echo "</td></tr>";
 ?>
 
 </table>

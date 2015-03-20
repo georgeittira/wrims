@@ -23,7 +23,7 @@
 	$sql1="select u.*, c.* from  mast_unit u, wri_list c where c.wri_no = '$id' and c.unit_id = u.unit_id";
 	$result1  = $conn->query($sql1);
        	
-    $sql2 = "select f.*, w.* from  ecn_fcn_list f, wri_list w where f.ecn_fcn_key = w.ref_ecn_fcn_key and w.wri_no = '$id'";
+    $sql2 = "select f.*, w.* from  ecn_fcn_list f, wri_list w where (f.ecn_fcn_key = w.ref_ecn_fcn_key) and w.wri_no = '$id'";
     $result2=$conn-> query($sql2);
     $row2 = $result2->fetch_assoc();
     $title = $row2["title"];

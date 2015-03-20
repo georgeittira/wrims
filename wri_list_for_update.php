@@ -15,11 +15,11 @@
    <?php
    session_start();
 	$ag = $_SESSION['Agency'];
-    echo $ag;
+    //echo $ag;
 	
 	include ("configdb.php");
 	    $sql1 = "select * from file_flow where fl_to_whom ='$ag' and fl_processed= 'No' and fl_action_required = 'YES' 
-		and fl_status_flag = '330'";
+		and fl_status_flag = '324'";
         $result1=$conn->query($sql1);
         if ($result1->num_rows < 1) {
         echo "---NIL----";
@@ -30,10 +30,7 @@
        	$wri_no  = $row1["fl_doc_no"];
        	$seq_no   = $row1["fl_seq_no"];
         $typ      = $row1["fl_doc_type"];
-	           
-        /*$sql2 = "select * from wri_list where wri_status_flag = '324'";
-		$result2=$conn->query($sql2);*/
-          
+	         
         $sql3 = "select f.*, w.* from  ecn_fcn_list f, wri_list w where f.ecn_fcn_key = w.ref_ecn_fcn_key and w.wri_no = '$wri_no'";
         $result3=$conn-> query($sql3);
         $row3 = $result3->fetch_assoc();
