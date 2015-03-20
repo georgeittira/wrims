@@ -5,7 +5,7 @@
 	include ("configdb.php");
    	   
        $doc_no          = $_GET['doc_no'];
-       $ecn_fcn_key     = $_GET['ecn_fcn_key'];
+       //$ecn_fcn_key     = $_GET['ecn_fcn_key'];
        $unit            =  $_GET['unit'];
        $from            = $_GET['from'];
        $wire_no         = $_GET['wire_no'];
@@ -20,23 +20,25 @@
 	switch ($remarks)	{
         case ($remarks == 'ADDITION') :
             if ( $cable_mod == 'yes' ) {
-             $sql = "update terminal_list  set wire_no ='$wire_no',  cable_no ='$cable_no', cable_binder = '$cable_binder', color_code = '$color_code', destination ='$destination', drawing_no = '$drawing_no', ecn_fcn_no = '$ecn_fcn_key', update_date = Now() where unique_id = '$from'";
+             $sql = "update terminal_list  set wire_no ='$wire_no',  cable_no ='$cable_no', cable_binder = '$cable_binder', color_code = '$color_code', destination ='$destination', drawing_no = '$drawing_no', wri_no = '$doc_no', update_date = Now() where unique_id = '$from'";
 		    }
 			elseif  ( $cable_mod == 'no' ) {
-            $sql = "update terminal_list  set wire_no ='$wire_no', destination ='$destination', drawing_no = '$drawing_no', ecn_fcn_no = '$ecn_fcn_key', update_date = Now() where unique_id = '$from'";
+            $sql = "update terminal_list  set wire_no ='$wire_no', destination ='$destination', drawing_no = '$drawing_no', wri_no = '$doc_no', update_date = Now() where unique_id = '$from'";
         	}
             $result=$conn->query($sql);
         BREAK;
 			
 		case ($remarks == 'DELETION') :
          if ( $cable_mod == 'yes' ) {
-             $sql = "update terminal_list  set wire_no ='spare',  cable_no ='', cable_binder = '', color_code = '', destination ='', drawing_no = '', ecn_fcn_no = '$ecn_fcn_key', update_date = Now() where unique_id = '$from'";
+             $sql = "update terminal_list  set wire_no ='spare',  cable_no ='', cable_binder = '', color_code = '', destination ='', drawing_no = '', wri_no = '$doc_no', update_date = Now() where unique_id = '$from'";
 		    }
 			elseif  ( $cable_mod == 'no' ) {
-            $sql = "update terminal_list  set wire_no ='spare', destination ='', drawing_no = '', ecn_fcn_no = '$ecn_fcn_key', update_date = Now() where unique_id = '$from'";
+            $sql = "update terminal_list  set wire_no ='spare', destination ='', drawing_no = '', wri_no = '$doc_no', update_date = Now() where unique_id = '$from'";
         	}
             $result=$conn->query($sql);
          BREAK;
     }
+    echo $sql;
+    echo $doc_no;
      //updating 'destination' details to terminal_list 
-     header("Location: wri_update.php/");
+    // header("Location: wri_update.php/");

@@ -129,7 +129,7 @@
       	echo "<td>$remarks</td>";
 		echo "<td>$drawing_no</td>";
 		echo "<td>";
-		echo "<a href = './tl_update_save.php?doc_no=$id&unit=$unit&from=$from&wire_no=$wire_no&cable_no=$cable_no&cable_binder=$cable_binder&color_code=$color_code&cable_mod=$cable_mod&destination=$destination$&remarks=$remarks&drawing_no=$drawing_no'>Update TL</a>";
+		echo "<a href = './tl_update_save.php?doc_no=$id&unit=$unit&from=$from&wire_no=$wire_no&cable_no=$cable_no&cable_binder=$cable_binder&color_code=$color_code&cable_mod=$cable_mod&destination=$destination&remarks=$remarks&drawing_no=$drawing_no'>Update TL</a>";
         echo "</td></tr>";
         
 		}
