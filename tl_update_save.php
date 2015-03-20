@@ -64,22 +64,24 @@
        
        $sql = "update master_wri set tl_updated ='Yes' where wri_key = '$wri_key'";
        $result=$conn->query($sql);
-     
+            
     //update tl_update flag in wri_list
-    
+    	
     $sql = "select 1 as Flag from master_wri where wri_key = '$wri_key' and tl_updated = ''";
 	$result=$conn->query($sql);
-	if ($result->num_rows == 0) {
+    echo $sql;
+	if ($result->num_rows > 0) {  
 	$row = $result->fetch_assoc();
 	$Flag = $row['Flag'];
+    echo $Flag;
  	
 	if ($Flag == 1) {
-		$sql = "update wri_list set tl_updated ='Yes' where wri_no = '$doc_no'";
-		$result=$conn->query($sql);
-     header("Location: wri_update.php");   
+		header("Location: wri_update.php?docNo=".urlencode($doc_no)); 
         }
     else {
-         header("Location: wri_update.php?docNo=".urlencode($doc_no));
+        $sql = "update wri_list set tl_updated ='Yes' where wri_no = '$doc_no'";
+		$result=$conn->query($sql);
+        header("Location: wri_list_for_update.php");  
         }
     }
     

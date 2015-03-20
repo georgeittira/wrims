@@ -99,9 +99,9 @@
 		 }
          echo " </table>";
 		//echo "======$doNotContinue";
-		/*  if ( $doNotContinue == 1 ){
+		  if ( $doNotContinue == 1 ){
            $_SESSION['continue'] = 0;
       	 }
-		*/ 
+		 
 	    
 ?>
