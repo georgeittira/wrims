@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "tl_manager";
+$password = "Naruto1996!";
 $rdbname = "tl_manager";
 
 // Create connection

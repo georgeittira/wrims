@@ -218,7 +218,7 @@
 <ul id="qm0" class="qmmc">
 	    <li><a class="qmparent" href="javascript:void(0)">VIEW</a>
         <ul>
-		<li><a href="javascript:void(0)" target="right" title="Terminal Lists">TL</a>
+		<li><a href="javascript:void(0)" target="bottom" title="Terminal Lists">TL</a>
 	        <ul>
 			<li><a href="javascript:void(0)">JB</a></li>
 			
@@ -250,19 +250,19 @@
 			</ul></li>
 						
 		<li><a href="javascript:void(0);">DRAWING LIST</a></li>
-		<li><a href="wri_schedule.php" target="right" title="List of WRIs">WRI List</a></li>
-        <li><a href="wri_list.php" target="right" title="List of WRIs">WRI master</a></li>
+		<li><a href="wri_schedule.php" target="bottom" title="List of WRIs">WRI List</a></li>
+        <li><a href="wri_list.php" target="bottom" title="List of WRIs">WRI master</a></li>
 		</ul></li>
 
-	<li><a class="qmparent" href="ecn_fcn_for_wri.php" target="right" title="Prepare new WRI for ECN/FCN">NEW WRI</a>
+	<li><a class="qmparent" href="ecn_fcn_for_wri.php" target="bottom" title="Prepare new WRI for ECN/FCN">NEW WRI</a>
 
-	<li><a class="qmparent" href="pending_list.php" target="right" title="List of pending documents">PENDING DOCS</a> 
+	<li><a class="qmparent" href="pending_list.php" target="bottom" title="List of pending documents">PENDING DOCS</a> 
 
 	<li><a class="qmparent" href="javascript:void(0)">UPDATE</a>
 
 		<ul>
-        <li><a href="wri_list_for_update.php" target="right" title="Wire Route Information">WRI</a>
-		<li><a href="javascript:void(0)" target="right" title="Terminal Lists">TL</a>
+        <li><a href="wri_list_for_update.php" target="bottom" title="Wire Route Information">WRI</a>
+		<li><a href="javascript:void(0)" target="bottom" title="Terminal Lists">TL</a>
 		<li><a href="javascript:void(0)">DRAWING LIST</a></li>
 		
 		<li><a class="qmparent" href="javascript:void(0)">SCHEDULES</a>

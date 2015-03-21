@@ -15,9 +15,7 @@
 	<th>File marked for </th>
    <?php
    session_start();
-	$ag = $_SESSION['Agency'];
-   
-	
+	$ag = $_SESSION['Agency'];	
 	include ("configdb.php");
 	    $pendingsql = "select * from file_flow 
 		where fl_to_whom ='$ag' and fl_processed= 'No' and fl_action_required = 'YES' 
