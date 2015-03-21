@@ -111,7 +111,7 @@
        $wire_no      = $row["wire_no"];
        $cable_no     = $row["cable_no"];
        $cable_binder = $row["cable_binder"];
-       $color_code   =  $row["color_code"];
+       $color_code   = $row["color_code"];
        $cable_mod    = $row["cable_mod"];
        $destination  = $row["destination"];
        $remarks      = $row["remarks"];

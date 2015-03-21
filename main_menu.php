@@ -216,8 +216,7 @@
 
 
 <ul id="qm0" class="qmmc">
-	<li><a class="qmparent" href="master_tl_list.php" target="right" title="HOME">HOME</a>
-	<li><a class="qmparent" href="javascript:void(0)">VIEW</a>
+	    <li><a class="qmparent" href="javascript:void(0)">VIEW</a>
         <ul>
 		<li><a href="javascript:void(0)" target="right" title="Terminal Lists">TL</a>
 	        <ul>
@@ -251,7 +250,8 @@
 			</ul></li>
 						
 		<li><a href="javascript:void(0);">DRAWING LIST</a></li>
-		<li><a href="javascript:void(0);">WRI</a></li>
+		<li><a href="wri_schedule.php" target="right" title="List of WRIs">WRI List</a></li>
+        <li><a href="wri_list.php" target="right" title="List of WRIs">WRI master</a></li>
 		</ul></li>
 
 	<li><a class="qmparent" href="ecn_fcn_for_wri.php" target="right" title="Prepare new WRI for ECN/FCN">NEW WRI</a>
@@ -285,7 +285,8 @@
 			</ul></li>
 	<li class="qmclear">&nbsp;</li></ul>
 	<li><a class="qmparent" href="javascript:void(0)">FEEDBACK</a>
-	<li><a class="qmparent" href="logout.php" target = "_top" title="Logout">LOGOUT</a>
+	<li><a class="qmparent" href="logout.php" target = "_top" title="Logout">LOGOUT</a></li>
+    
 	
     
 	

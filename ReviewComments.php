@@ -51,7 +51,7 @@
         } 
 		echo "</table>";
 	
-		/*echo " <table width='20% align = left' cellspacing=0 cellpadding=2 border=1 style=border-collapse:collapse;> ";*/
+	
 		
 	
 	//---
@@ -75,13 +75,10 @@
 		echo "<th>Marked to </th>";
 		echo "<th width=40%>Coments</th>";
         echo "<th>Marked for </th>";
-		 $doNotContinue =0;
-        while ($row1 = $R1->fetch_assoc()){
 		
-		        $curStatus = $row1["fl_status_flag"];
-		        if (($curStatus == 330 ) ) {
-             		  	$doNotContinue = 1;
-            	}
+        while ($row1 = $R1->fetch_assoc()){
+		    $curStatus = $row1["fl_status_flag"];
+		       
 		     echo "<tr><td>";
 			 echo $row1["emp_chq_name"];
 			 echo "</td><td>";
@@ -99,9 +96,9 @@
 		 }
          echo " </table>";
 		//echo "======$doNotContinue";
-		  if ( $doNotContinue == 1 ){
-           $_SESSION['continue'] = 0;
-      	 }
-		 
+        if  ($curStatus == 324 ) {
+		$_SESSION['continue'] = 0;
+        }
+		
 	    
 ?>

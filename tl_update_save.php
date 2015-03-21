@@ -1,7 +1,7 @@
  
 <?php
  
-	session_start();
+	
 	include ("configdb.php");
    	   
        $doc_no          = $_GET['doc_no'];
@@ -64,25 +64,25 @@
        
        $sql = "update master_wri set tl_updated ='Yes' where wri_key = '$wri_key'";
        $result=$conn->query($sql);
+      
+       header("Location: wri_update.php?docNo=".urlencode($doc_no)); 
             
-    //update tl_update flag in wri_list
+    /*update tl_update flag in wri_list
     	
-    $sql = "select 1 as Flag from master_wri where wri_key = '$wri_key' and tl_updated = ''";
-	$result=$conn->query($sql);
-    echo $sql;
-	if ($result->num_rows > 0) {  
-	$row = $result->fetch_assoc();
-	$Flag = $row['Flag'];
-    echo $Flag;
- 	
-	if ($Flag == 1) {
-		header("Location: wri_update.php?docNo=".urlencode($doc_no)); 
-        }
-    else {
-        $sql = "update wri_list set tl_updated ='Yes' where wri_no = '$doc_no'";
-		$result=$conn->query($sql);
+    $sql1 = "select 1 as Flag from master_wri where wri_key = '$wri_key' and tl_updated = ''";
+	$result1=$conn->query($sql1);
+    if ($result1->num_rows > 0) {  
+    $row = $result1->fetch_assoc();
+    $Flag = $row['Flag'];
+	
+       if ($Flag == 1){
+		header("Location: wri_update.php?docNo=".urlencode($doc_no));  
+       }
+        elseif ($Flag == 0){
+        $sql2 = "update wri_list set tl_updated ='Yes' where wri_no = '$doc_no'";
+		$result2=$conn->query($sql2);
         header("Location: wri_list_for_update.php");  
-        }
-    }
-    
+       }
+    }*/
+  ?>  
    

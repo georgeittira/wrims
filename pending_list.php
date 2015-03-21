@@ -48,7 +48,7 @@
         $title = $row1["title"];
         $ecn_fcn_no = $row1["ecn_fcn_no"];
         $url = "wri_show.php";
-	    echo "<tr><td>";
+        echo "<tr><td>";
         echo  "$typ";
 		echo "</td>";
 		echo "<td><a href=\"showDoc.php?URL=$url&docNo=$id&seq_no=$seq_no&type=$typ\">$id </a></td> ";

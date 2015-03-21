@@ -6,7 +6,7 @@
 
 <link rel='stylesheet' type='text/css' href='css/style_ecn.css'>
 
-<H4 align=center><u>Wire Route Information (WRI)for Field Change Notice (FCN) </u><H4>
+<H4 align=center><u>Wire Route Information (WRI)for ECNs/FCNs </u><H4>
 
 <?php
  
